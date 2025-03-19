@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for Naved! 💖</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe4ec;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #ff4d79;
+        }
+        .gif {
+            width: 200px;
+            height: auto;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes {
+            background-color: #ff4d79;
+            color: white;
+        }
+        .no {
+            background-color: white;
+            color: black;
+            position: absolute;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ff4d79;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Do You Love Me? 💕</h1>
+        <img class="gif" src="https://media.tenor.com/57JKw7A_k-kAAAAM/spongebob.gif" alt="Cute Gif">
+        <div class="buttons">
+            <button class="btn yes" onclick="showMessage()">Yes</button>
+            <button class="btn no" id="noButton">No</button>
+        </div>
+        <p class="message" id="message">Yes? Huh! I knew it! Love you to the moon and back! 💖🌙</p>
+    </div>
+    
+    <script>
+        const noButton = document.getElementById("noButton");
+        noButton.addEventListener("mouseover", function() {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        function showMessage() {
+    document.getElementById("message").style.display = "block";
+    document.querySelector(".gif").src = "https://media.tenor.com/SqYXXNI-A4IAAAAm/happy-valentines.webp";
+    document.getElementById("noButton").style.display = "none";
+}
+    </script>
+</body>
+</html>
